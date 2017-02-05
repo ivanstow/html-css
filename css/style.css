@@ -1,0 +1,269 @@
+/*
+Module Name: Advanced Web Authoring
+Tutor Name: Marcel Krajca
+Task: Tutor Marked Assignment
+Student Name: Ivan Stoyanov
+Username: istoya01
+Student Number: 12903492
+Submission Deadline: 16 June 2016 
+*/
+
+/*Font for page headings*/
+@font-face {
+  font-family: "bebas neue";
+	src: url(../fonts/BebasNeue-webfont.woff) format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/*CSS reset for cross-browser compatibility*/
+html,body,h1,h2,h3,h4,h5,h6,p,blockquote,ol,ul,li,form,fieldset,label,legend {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+img {
+  border: 1px solid #ccc;
+  display: inline;
+}
+
+ul,ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*My page defaults*/
+#wrapper {
+  width: 90%;
+  margin: auto;
+  border-right: solid 2px #cccccc;
+  border-left: solid 2px #cccccc;
+  border-top: solid 2px #ffffff;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+h2 {
+  margin-bottom: 0.25em;
+  font: 2em "bebas neue";
+  color: #3e3e3e;
+}
+
+h3 {
+  color: #016008;
+  font: 1.5em "bebas neue";
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+/*Header*/
+#header {
+  padding: 1em;
+}
+
+#header h1 {
+  color: #016008;
+  font: 4em "bebas neue";
+  text-shadow: 2px 2px #3e3e3e;
+}
+
+.smaller {
+  font-size: 0.75em;
+}
+
+/*Primary Navigation*/
+#primary {
+  padding-top: 1em;
+}
+
+#primary li {
+  display: inline;
+  margin-left: 1em;
+  padding: 0.4em 1.6em;
+  background-color: #cccccc;
+  box-shadow: 1.5px 1.5px 0 0 #3e3e3e;
+  border-radius: 0.2em;
+}
+
+#primary li:first-of-type {
+  margin-left: 0;
+}
+
+#primary li a {
+  color: #000000;
+  font: 1.25em "bebas neue";
+}
+
+.currentpage {
+  background-color: #f6f6f6;
+}
+
+/*Common Links*/
+#commonlinks {
+  float: right;
+  padding: 1em;
+}
+
+#commonlinks li {
+  display: inline;
+  margin-right: 1em;
+}
+
+#commonlinks li:last-of-type {
+  margin-right: 0;
+}
+
+#commonlinks li a {
+  color: #016008;
+  font-size: 0.75em;
+}
+
+/*Introduction*/
+#introduction {
+  border: 1px solid #cccccc;
+  margin: 1em;
+  float: right;
+}
+
+#introduction figure {
+  margin: 1em;
+  float: left;
+}
+
+#introduction p {
+  color: #3e3e3e;
+  font-size: 1.25em;
+}
+
+.introductiontext {
+  padding: 1em;
+}
+
+.introductiontext a {
+  color: #016008;
+}
+
+#contentcontainer {
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  margin: 1em;
+  padding: 1em;
+}
+
+/*Content Container: Left-hand side */
+#items {
+  width: 65%;
+  float: left;
+}
+
+#items article {
+  padding: 0 0.25em 2em;
+}
+
+#items article p {
+  color: #016008;
+  font-size: 0.85em;
+}
+
+#items p > strong {
+  color: #000;
+}
+
+.inner {
+  background-color: #dddddd;
+  padding: 1em;
+}
+
+/*Content Container: Right-hand side */
+#latestnews {
+  width: 33%;
+  float: right;
+}
+
+#latestnews	p {
+  font-size: 1em;
+  padding-bottom: 1em;
+}
+
+#latestnews	a {
+  color: #016008;
+  text-decoration: underline;
+  font-size: 0.85em;
+}
+
+.author {
+  font-size: 0.8em;
+  font-style: italic;
+  float: right;
+}
+
+#subscribe {
+  margin-top: 1em;
+}
+
+#subscribe div.inner > p {
+  color: #3e3e3e;
+  font-size: 0.85em;
+  padding: 0;
+}
+
+/*Subscription Form*/
+form {
+  margin: 1em 0;
+}
+
+fieldset {
+  padding: 0.5em;
+  background-color: #f6f6f6;
+}
+
+legend {
+  color: #3e3e3e;
+  font: 1.5em "bebas neue";
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.75em;
+  display: block;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+}
+
+.required {
+  color: #ff0000;
+}
+
+.controls {
+  padding-bottom: 0.5em;
+  clear: left;
+}
+
+/*Footer*/
+#footer {
+  background-color: #dddddd;
+  padding: 1em;
+  clear: both;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#footer h3 {
+  color: #3e3e3e;
+}
+
+#footer p {
+  color: #3e3e3e;
+  font-weight: bold;
+  font-size: 0.75em;
+}
