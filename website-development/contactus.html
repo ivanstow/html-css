@@ -1,0 +1,155 @@
+<!--
+Module Name: Advanced Web Authoring
+Tutor Name: Marcel Krajca
+Task: Final Marked Assignment (FMA)
+Student Name: Ivan Stoyanov
+Username: istoya01
+Student Number: 12903492
+Submission Deadline: 2 August 2016 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Emblem Collectible Books</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!--[if lt IE 9]> 
+	<script src="js/html5shiv.js"></script> 
+  <![endif]-->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <a class="skiplink" href="#contact">Skip to contact form</a> 
+    <a class="skiplink" href="#controls">Skip to footer</a>
+    <header id="header" role="banner">
+      <nav id="commonlinks" role="navigation">
+        <ul>
+          <li><a href="contactus.html">Contact us</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img alt="Emblem Collectible Books" src="images/emblem_logo_128.png">
+      </figure>
+      <h1>EMBLEM</h1>
+      <p class="tagline">Rare, Collectible Books</p>
+      <nav id="primary" role="navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="books.html">BOOKS</a></li>
+          <li><a href="delivery.html">DELIVERY</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">BOOKS AS AN INVESTMENT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <section id="contentcontainer">
+        <nav id="breadcrumbs" role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a> &rarr;</li>
+            <li><a href="contactus.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div id="contact">
+          <h2>Contact us</h2>
+          <p>Please feel free to contact us if you are looking to buy a book
+          not listed in our collection, or if you are looking to sell a book,
+          have a book valued or have a book repaired.<br>
+          <br>
+          We try to answer all queries within 24 hours of receipt.</p>
+          <div id="imagewrapper">
+            <figure>
+              <img alt="Google Map" src="images/map.png">
+            </figure>
+          </div>
+        </div>
+        <div id="controls" role="form">
+          <form action="http://titan.dcs.bbk.ac.uk/~ubseaxt/process.php" method="post">
+            <fieldset>
+              <legend>Send us a message . . .</legend>
+              <div class="controlgroup">
+                <label for="title">Title:</label> 
+                <select id="title" name="title">
+                  <option value="Mr">Mr</option>
+                  <option value="Mrs">Mrs</option>
+                  <option value="Miss">Miss</option>
+                  <option value="Ms">Ms</option>
+                  <option value="Dr">Dr</option>
+                  <option value="Prof">Prof</option>
+                </select>
+              </div>
+              <div class="controlgroup">
+                <label for="name">Full name:<span class="required">*</span></label> 
+                <input aria-required="true" id="name" name="fullname" placeholder="Enter your full name" required type="text">
+              </div>
+              <div class="controlgroup">
+                <label for="email">Email address:<span class="required">*</span></label> 
+                <input aria-required="true" id="email" name="emailaddress" placeholder="Enter email address" required type="email">
+              </div>
+              <div class="controlgroup">
+                <label for="query">Nature of query:</label> 
+                <select id="query" name="natureofquery">
+                  <option value="Buy books">Buy books</option>
+                  <option value="Sell books">Sell books</option>
+                  <option value="Return a book">Return a book</option>
+                  <option value="Delivery">Delivery</option>
+                  <option value="Complaint">Complaint</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="controlgroup">
+                <label for="msg">Message:<span class="required">*</span></label> 
+                <textarea aria-required="true" id="msg" name="message" placeholder="Type your message here..." required></textarea>
+              </div>
+              <input name="submitquery" type="submit" value="Send">
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer id="footer" role="contentinfo">
+      <div class="footergroup">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Refunds & Returns</a></li>
+          <li><a href="#">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">Whishlist</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Pintrest</a></li>
+        </ul>
+      </div>
+      <div class="registration">
+        <p>Registered Address: 329 Mile End Rd, London, E1 4NT. Registered number: 02857794.<br>
+        <a href="#">Our use of cookies</a> | <a href="#">Terms and conditions</a><br>
+        Emblem Collectible Books © 2016</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

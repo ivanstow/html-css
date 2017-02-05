@@ -1,0 +1,175 @@
+<!--
+Module Name: Advanced Web Authoring
+Tutor Name: Marcel Krajca
+Task: Final Marked Assignment (FMA)
+Student Name: Ivan Stoyanov
+Username: istoya01
+Student Number: 12903492
+Submission Deadline: 2 August 2016 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Emblem Collectible Books</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!--[if lt IE 9]> 
+	<script src="js/html5shiv.js"></script> 
+  <![endif]-->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <a class="skiplink" href="#deliverycontent">Skip to side content</a>
+    <a class="skiplink" href="#deliveryillustration">Skip to footer</a>
+    <header id="header" role="banner">
+      <nav id="commonlinks" role="navigation">
+        <ul>
+          <li><a href="contactus.html">Contact us</a></li>
+          <li><a href="#">Accessibility</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <figure>
+        <img alt="Emblem Collectible Books" src="images/emblem_logo_128.png">
+      </figure>
+      <h1>EMBLEM</h1>
+      <p class="tagline">rare, collectible books</p>
+      <nav id="primary" role="navigation">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="books.html">BOOKS</a></li>
+          <li><a href="delivery.html">DELIVERY</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">BOOKS AS AN INVESTMENT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <div id="contentcontainer">
+        <nav id="breadcrumbs" role="navigation">
+          <ul>
+            <li><a href="index.html">Home</a> &rarr;</li>
+            <li><a class="bccurrentpage">Delivery</a></li>
+          </ul>
+        </nav>
+        <section id="deliverycontent">
+          <h2>Delivery</h2>
+          <table>
+            <caption>Delivery options
+              <details>
+                <summary>
+                  All deliveries are included in the price of the book for
+                  books over &pound;500. Otherwise the following rates apply:
+                </summary>
+                <p>All deliveries are included in the price of the book for
+                books over &pound;500. Otherwise the following rates apply:</p>
+              </details>
+            </caption>
+            <tbody>
+              <tr>
+                <td></td>
+                <th scope="col">Up to 1kg</th>
+                <th scope="col">Over 1kg</th>
+                <th scope="col">Over 3kg</th>
+              </tr>
+              <tr>
+                <th scope="row">UK</th>
+                <td id="uk up to 1kg">&pound;5.99</td>
+                <td id="uk over 1kg">&pound;11.59</td>
+                <td id="uk over 3kg">&pound;33.99</td>
+              </tr>
+              <tr>
+                <th scope="row">Europe</th>
+                <td id="europe up to 1 kg">&pound;12.00</td>
+                <td id="europe up to 2kg">&pound;25.00</td>
+                <td id="europe up to 3kg">&pound;70.00</td>
+              </tr>
+              <tr>
+                <th scope="row">USA/Canada</th>
+                <td id="us/canada up to 1kg">&pound;14.99</td>
+                <td id="us/canada up to 2kg">&pound;27.00</td>
+                <td id="us/canada up to 3kg">&pound;68.00</td>
+              </tr>
+              <tr>
+                <th scope="row">Rest of the World</th>
+                <td id="rest of the world up to 1kg">&pound;20.00</td>
+                <td id="rest of the world up to 2kg">&pound;25.00</td>
+                <td id="rest of the world up to 3kg">&pound;80.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="deliverycountry">
+            <p>Deliveries are undertaken where appropriate by specialist
+            fragile and valuable goods handlers. All goods are sent first-class
+            to both the UK and abroad.<br>
+            <br>Estimated delivery times are as follows:</p>
+            <dl>
+              <dt id="UK">UK</dt>
+              <dd aria-labelledby="UK">1 - 2 days</dd>
+              <dt id="Europe">Europe</dt>
+              <dd aria-labelledby="Europe">2 - 3 days</dd>
+              <dt id="USA/Canada">USA/Canada</dt>
+              <dd aria-labelledby="USA/Canada">3 - 5 days</dd>
+              <dt id="Rest of the World">Rest of the World</dt>
+              <dd aria-labelledby="Rest of the World">5 - 14 days</dd>
+            </dl>
+            <p>However, delivery times may differ if repair to books is requested before dispatch.</p>
+          </div>
+        </section>
+        <aside id="deliveryillustration">
+          <figure>
+            <img alt="deliveries" src="images/delivery.png">
+          </figure>
+          <h3>Registered Address</h3>
+          <p>329 Mile End Rd<br>
+          London, E1 4NT<br>
+          Telephone: 020 7364 3115<br>
+          Email: <a href="mailto:deliveries@emblembooks.co.uk">delivery@emblembooks.co.uk</a><br>
+          Registered number: 02857794</p>
+        </aside>
+      </div>
+    </main>
+    <footer id="footer" role="contentinfo">
+      <div class="footergroup">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="">Shipping</a></li>
+          <li><a href="#">Refunds & Returns</a></li>
+          <li><a href="#">Payment Options</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Affiliate Program</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>Account</h3>
+        <ul>
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">Whishlist</a></li>
+        </ul>
+      </div>
+      <div class="footergroup">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Pintrest</a></li>
+        </ul>
+      </div>
+      <div class="registration">
+        <p>Registered Address: 329 Mile End Rd, London, E1 4NT. Registered number: 02857794.<br>
+        <a href="#">Our use of cookies</a> | <a href="#">Terms and conditions</a><br>
+        Emblem Collectible Books © 2016</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
