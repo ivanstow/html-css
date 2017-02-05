@@ -1,0 +1,116 @@
+<!--
+Module Name: Advanced Web Authoring
+Tutor Name: Marcel Krajca
+Task: Tutor Marked Assignment
+Student Name: Ivan Stoyanov
+Username: istoya01
+Student Number: 12903492
+Submission Deadline: 16 June 2016 
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
+		<title>BootWorld</title>
+	</head>
+<body>
+	<div id="wrapper">
+		<nav id="commonlinks">
+				<ul>
+				<li><a href="#">Site map</a></li>
+				<li><a href="#">Privacy policy</a></li>
+				<li><a href="#">Accessibility</a></li>
+				</ul>
+		</nav>
+		<header id="header">
+			<h1>Boot<span class="smaller">World</span></h1>
+		
+			<nav id="primary">
+				<ul>
+				<li class="currentpage"><a href="index.html">Home</a></li>
+				<li><a href="#">Shop</a></li>
+				<li><a href="#">News</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+				<li><a href="#">Subscribe</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="introduction">
+		<figure>
+			<img src="images/boots.png" width="480" height="320" alt="BootWorld">
+		</figure>		
+		<div class="introductiontext">
+			<h2>Welcome to BootWorld</h2>
+			<p>BootWorld is the largest online footwear retailer in the UK. 
+			<a href="#">Our shop</a> always has stock of the latest designer footwear at the most competitive prices. Want to know more about us or our products, why not 
+			<a href="mailto:contact@bootworld.co.uk">send us a message</a>.
+			</p>
+		</div>
+		</section>
+		<div id="contentcontainer">
+			<section id="items">					
+				<h2>New in the shop</h2>
+				<div class="inner">				
+				<article>
+					<h3>Classic cowboy boots</h3>
+					<p>Stand out from the crowd in a pair of classic cowboy boots. 
+					Available for Ladies and Gents from only <strong>£49.99</strong>.</p>
+				</article>
+				<article>
+					<h3>Military boots</h3>
+					<p>Hard-wearing Men's military boots, guaranteed to withstand all weathers. 
+					From only <strong>£69.99</strong>.</p>
+				</article>
+				<article>
+					<h3>Roman sandals</h3>
+					<p>Get ready for summer with some stylish Roman sandals. 
+					From only <strong>£39.99</strong>.</p>
+				</article>
+				<article>
+					<h3>Office shoes</h3>
+					<p>You don't have to wear boring shoes to the office. Check out our new stock of 
+					Ladies and Gents fashionable office shoes from only <strong>£44.99</strong>.</p>
+				</article>
+				</div>
+			</section>
+			<aside id="latestnews">
+			<div class="inner">
+				<h2>Latest News</h2>
+					<p><a href="#">Our seasonal sale has kicked off again! 
+					Make sure you stop by our online shop to pick up a bargain.</a>
+					<br>
+					<span class="author">Posted by: Joe</span></p>			
+			</div>
+			<div id="subscribe">
+				<div class="inner">
+				<h2>Subscribe</h2>
+				<p>Sign up to our newsletter and receive exclusive offers by email weekly.</p> 
+				<form method="post" action="process.php">
+					<fieldset>
+					<legend>Sign Up Now</legend>
+						<div class="controls">
+						<label for="name">Your name:</label>
+						<input type="text" name="name" id="name">
+						</div>
+						<div class="controls">
+						<label for="email">Email address: <span class="required">*</span></label>
+						<input type="email" name="email" id="email">
+						</div>
+					<input type="submit" name="subscription" value="Sign up"/>
+					</fieldset>
+				</form>
+				</div>
+				</div>
+			</aside>
+		</div>
+		<footer id="footer">
+			<h3>Our address:</h3>
+			<p>Malet Street,<br>
+			London, WC1E 7HX</p>
+		</footer>		
+	</div>
+</body>
+</html>
