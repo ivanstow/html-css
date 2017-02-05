@@ -1,0 +1,1623 @@
+/*
+Module Name: Advanced Web Authoring
+Tutor Name: Marcel Krajca
+Task: Final Marked Assignment (FMA)
+Student Name: Ivan Stoyanov
+Username: istoya01
+Student Number: 12903492
+Submission Deadline: 2 August 2016 
+*/
+
+/*Font for page headings*/
+@font-face {
+  font-family: 'parisian';
+	src: url("../font/parisr.eot?#e") format("embedded-opentype"),
+		url("../font/parisr.woff") format("woff"),
+		url("../font/parisr.ttf") format("truetype"),
+		url("../font/parisr.svg#my_font") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 
+A reset stylesheet which reduces browser inconsistencies.
+Referenced from http://meyerweb.com/eric/tools/css/reset/ 
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset stylesheet for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: #e6e6e6;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*My page defaults*/
+#wrapper {
+  width: 80%;
+  margin: auto;
+	border-left: 1px solid #2d8653;
+	border-right: 1px solid #2d8653;
+	border-bottom: 1px solid #2d8653;
+}
+
+body {
+  font-family: Roboto Condensed, Arial, sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  color: #00210e;
+  font-family: "parisian";
+}
+
+h3 {
+  color: #ffdeb8;
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  font-family: 'parisian';  
+padding: 0.25em 0.25em 0.25em 0.75em;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #4C712B; 
+}
+
+.skiplink { 
+	position: absolute; 
+	left: -10000px; 
+} 
+.skiplink:focus { 
+	left: 0; 
+	background-color: #4c712b; 
+	color: #ffff00; 
+}
+
+a:hover, a:focus { 	
+  color: #8fbda1;
+	text-decoration: none; 
+}
+
+/* Page Header */
+#header	{
+  text-align: center;  
+	width: 100%;	
+	background-color: #2d8653;
+	background: -webkit-linear-gradient(#2d8653, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#2d8653, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#2d8653, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#2d8653, #ffffff); /* Standard syntax */
+}
+
+#header	img {
+	max-width: 100%;
+	margin-top: -2em;
+}
+
+#header h1 {
+  color: #236841;
+  font: 6em "parisian";
+  text-shadow: 2px 2px #ffdeb8;
+  display: inline;
+}
+
+.tagline {
+	font-size: 2em;
+	font-family: "parisian";
+	color: #003315;
+	text-shadow: 2px 2px #808080;
+	margin-bottom: 0.5em;
+}
+
+/* Common Links */
+#commonlinks {
+	text-align: right;
+	padding: 1em;
+	margin-right: 1em;
+}
+
+#commonlinks li {
+	display: inline;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+}
+
+#commonlinks li:last-of-type, li:first-of-type {
+	margin-right: 0;
+}
+
+#commonlinks li:first-of-type {
+	margin-left: 0;
+}
+
+#commonlinks li a {
+	font-size: 1em;
+	color: #ffdeb8;
+}
+
+#commonlinks li a:hover {	
+	text-decoration: underline;	
+}
+
+/* Primary Navigation */
+#primary {
+	padding: 2em 1em 1em 0;
+}
+
+#primary li {
+  display: inline;
+  padding: 0.7em 1.75em;
+  background-color: #236841;
+  border: 1px solid #ffdeb8;
+  border-radius: 10px;
+  box-shadow: 4px 3px 2px #808080;
+}
+
+#primary li a {
+	color: #ffdeb8;
+	font-size: 1.35em;	
+}
+
+#primary li a:hover {
+	text-shadow: 3px 2px #00210e;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    padding: 0.5em 1.75em;
+  background-color: #448861;
+  border-left: 10px solid #cba880;
+	margin: 0 auto;
+	border-radius: 15px 50px 30px;
+	box-shadow: 4px 4px 4px grey;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Secondary Navigation*/
+#secondarynavcolumn {
+	width: 18%;
+	float: left;
+	background-color: #FFF;	
+}
+
+#secondary {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	border-left: 1px solid #236841;
+	margin: 1em 0em 0em 1em;
+}
+
+#secondary ul li {
+list-style-type: none;
+background-color: #FFF;
+border-top-right-radius: 2em;
+border-bottom-right-radius: 2em;
+border-right: 6px solid #236841;
+border-top: 1px solid #236841;
+padding: 0.5em;
+}
+
+#secondary ul li:last-of-type {
+	border-bottom: 1px solid #236841;
+}
+
+#secondary ul li a {
+	color: #0b4524;
+	font-size: 0.85em;
+	font-size: 1em;	
+	text-align: right;
+	padding-left: 1em;
+}
+
+#secondary ul li a:hover {
+	border-left: 1px solid #ffffff;
+ color: #8fbda1;
+}
+
+/*Breadcrumbs*/
+#breadcrumbs {
+	padding-left: 1em;
+	padding-top: 2em;
+	margin-bottom: 1em;
+}
+
+#breadcrumbs li {
+	display: inline;
+	margin: 0 auto;
+}
+
+#breadcrumbs ul li a:hover {
+	border-top: 1px solid #0b4524;
+}
+
+main {
+	border: 1px solid #84b798;
+margin: 1em;
+border-radius: 30px;
+box-shadow: 2px 2px 3px;
+}
+
+/* Website Introduction */
+#introduction {	
+	overflow: hidden;
+	padding: 1em;
+}
+
+video {
+  width: 100%; 
+  height: auto;
+} 
+
+.welcomevideo {
+    width: 50%;
+    float: left;
+    padding: 1em;
+	border: 10px solid #448861;
+	border-radius: 30px;
+}
+
+.welcomevideo h2 {
+	text-align: center;
+}
+
+.illustration {
+	width: 41%;	
+	display: inline;
+	float: right;
+	padding: 1em;
+	border: 1px solid #448861;
+border-radius: 30px;
+float: right;
+margin-top: 1.25em;
+box-shadow: 2px 2px 3px;
+}
+
+.illustration img {
+	max-width: 100%;	
+	border-radius: 20px;
+}
+
+.bookofthemonth {	
+	width: 41%;	
+	display: inline;
+	float: right;
+	background-color: #ffffff;
+	padding: 1.2em;	
+	border: 1px solid #448861;
+border-radius: 30px;
+box-shadow: 2px 2px 3px;	
+}
+
+.bookofthemonthinner {	
+padding: 1em;
+border-radius: 20px;
+border: 1px solid #448861;
+box-shadow: 2px 2px 3px;
+}
+
+.bookofthemonth h3 {
+	font-family: Roboto Condensed,Arial,sans-serif;
+color: #003315;
+}
+
+.bookofthemonthinner figure {
+float: left;
+margin-right: 1em;
+border-radius: 20px;
+max-width: 100%;
+}
+
+.bookofthemonth p {
+	font-size: 1.35em;
+}
+
+.bookofthemonthinner img {
+max-width: 100%;
+}
+
+.year {	
+	padding-bottom: 0.5em;
+}
+
+.author {
+	font-size: 0.75em;
+	padding-top: 0.5em;
+}
+
+.text {
+	display: inline-block;
+background-color: #8fbda1;
+padding: 0.75em;
+border-radius: 20px;
+margin-top: 0.5em;
+}
+
+/* Main Content */
+#contentcontainer {
+	overflow: hidden;
+	padding: 1em;
+}
+
+#services {
+	width: 53%;
+	float: left;
+	padding: 1em;
+}
+
+#services h3{
+background-color: #448861;
+border-radius: 12px 100px 12px;
+}
+
+#services article {
+	margin-left: 2em;
+	margin-bottom: 2em;
+	border: 1px solid #B3B3B3;	
+	box-shadow: 2px 2px 2px #4d996e;
+	padding: 0.5em;
+}
+
+#services article p {
+  color: #1a0600;
+  font-size: 1.15em;
+}
+
+.articleinner {
+	padding: 1em;
+}
+
+.articleinner li {
+	font-style: italic;
+	padding-left: 1.5em;
+}
+
+#acquisitions {
+  width: 40%;
+  float: right;
+  padding: 1em;
+}
+
+#acquisitions h3{
+background-color: #448861;
+border-radius: 12px 100px 12px;
+}
+
+#acquisitions div {
+	margin-left: 2em;
+	margin-bottom: 2em;
+	border: 1px solid #84b798;	
+	display: inline-block;
+}
+
+
+#acquisitions figure {
+	display:inline-block;
+}
+
+.cover img {
+	height: auto;
+	width: 100%;
+}
+
+#acquisitions blockquote {
+	font-size: 1em;
+padding-top: 0.5em;
+}
+
+
+/*Contact Us*/
+fieldset {
+	padding: 2em;
+	border: 4px solid #CAD2DB;
+	border: 1px solid #B3B3B3;
+	box-shadow: 2px 2px 2px #4D996E;
+	height: auto;
+}
+
+#contact {
+	float: left;
+	width: 45%;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+#contact h2 {
+	margin-bottom: 1em;
+}
+
+#contact p {
+	margin-bottom: 1em;
+}
+
+#imagewrapper img {
+	max-width: 100%;	
+	border-radius: 30px;
+}
+
+#imagewrapper figure {
+	border-radius: 30px;
+box-shadow: 2px 2px 3px;
+padding: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+#controls {	
+	margin-left: 3em;
+	float: left;
+	width: 45%
+}
+
+.controlgroup {
+	padding: 1em;
+	clear: left;
+}
+
+.required {
+	color: red;
+	margin-left: 0.5em;
+}
+
+label {
+	font-weight: bold;
+	width: 35%;
+	float: left;	
+}
+
+textarea, input[type="text"], input[type="email"] {
+    width: 60%;
+}
+
+input[type="submit"] {
+	margin: 1em;
+}
+
+legend {
+	font-family: "parisian";
+	background-color: #448861;
+border-radius: 12px 100px 12px;
+  color: #ffdeb8;
+  font-size: 1.5em;
+  margin-bottom: 0.75em; 
+padding: 0.25em 0.25em 0.25em 0.75em;
+	
+}
+
+textarea {
+    height: 10em;
+}
+
+/*Books*/
+#featuredbooks {
+	width: 53%;
+	float: right;
+	padding: 1em;
+	border: 1px solid #000000;
+}
+
+#books {
+	float: right;
+	width: 75%;
+	padding: 1em 2em 1em 2em;
+}
+
+#books h3{
+background-color: #448861;
+border-radius: 12px 100px 12px;
+}
+
+#books article {
+	margin-left: 2em;
+	margin-bottom: 2em;
+	border: 1px solid #B3B3B3;
+	border-radius: 0px 40px 0px 0px;
+	box-shadow: -3px 3px 2px #4d996e;
+}
+
+#books article {
+	font-size: 1.15em;
+}
+
+.writers {
+	float: left;
+width: 100%;
+}
+
+.writers h3 {
+	background-color: #448861;
+border-radius: 12px 100px;
+text-align: left;
+}
+
+.imageframe {
+	background-color: #bfd9c9;
+	margin: 0.25em;
+	display: inline-block;
+	border-radius: 30px;
+box-shadow: 2px 2px 3px;
+position: center;
+}
+
+.imageframe figure {
+	position: center;
+	max-width: 100%;
+}
+
+.imageframe img {
+		
+	padding: 0.75em;
+	border-radius: 30px;
+}
+
+.imageframe figcaption {
+	padding: 0.75em 1em 0.75em 0.75em;
+	border-top: 1px solid #000000;
+	text-align: right;
+	font-size: 1.25em;
+	
+}
+
+
+/*19th Century Books*/
+#nineteenth {
+	float: right;
+padding: 1.5em;
+width: 74%;
+margin: 1em;
+border: 1px solid #448861;
+border-radius: 30px;
+box-shadow: 2px 2px 3px;
+}
+
+#nineteenth article {
+	float: left;
+	margin-top: 1em;
+}
+
+#nineteenth p {
+	float: left;
+	margin: 0.5em;
+	font-size: 1.10em;
+}
+
+.bookstats {
+		float: left;
+width: 25%;
+padding: 1em;
+margin: 0.75em;
+border: 1px solid #84B798;
+border-radius: 30px;
+}
+
+/* Description list with names and values side by side */
+.bookstats dl {
+    padding: 0.5em;
+    width: 80%;
+}
+
+.bookstats dt {
+    font-weight: bold;
+    float: left;
+    clear: left;
+    text-align: right;
+	font-size: 0.85em;
+}
+
+.bookstats dd {
+    margin-left: 20%; 
+    padding-bottom: 0.5em; 
+    font-style: italic;
+	font-size: 0.85em;
+}
+
+.bookstats dl dd:last-child {
+    padding-bottom: 0; 
+}
+
+.bookdescription {
+	width: 65%;
+	float: right;
+	margin: 0.5em;
+}
+
+.bookdescription h2 {
+	margin-bottom: 0.25em;
+}
+
+.bookdescription h3 {
+	font-family: Roboto Condensed, Arial, sans-serif;
+    font-size: 1.25em;
+	color: #8FBDA1;
+	padding: 0em;
+}
+
+#nineteenth  img {
+	max-width: 100%;
+}
+
+/*Delivery Table*/
+#deliverycontent {
+	width: 40%;
+	padding: 1em;
+	float: left;
+}
+
+caption {
+    border-bottom-width: 0px;
+    color: #000000;
+    font-family: Roboto Condensed, Arial, sans-serif;
+    font-size: 1.25em;
+    text-align: left;
+	margin-bottom: 1em;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+    border-spacing: 0px;
+	margin-bottom: 1em;
+border: 1px solid #448861;
+}
+
+details {
+    font-size: 0.8em;
+   	padding-top: 1em;
+}
+
+summary {
+    position: absolute;
+    left: -999px;
+}
+
+table tr:first-child, td:first-child {
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    text-align: right;
+}
+
+td {
+    background-color: #BFD9C9;
+}
+
+td, th {
+    padding: 0.5em 0.75em;
+	font-size: 1.25em;
+}
+
+tbody {
+	text-align: center;
+padding: 1em;
+}
+
+dl, dt, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/*Description list*/
+
+.deliverycountry {
+	width: 100%;
+}
+
+.deliverycountry dl {
+    padding: 1em;    	
+	background-color: #bfd9c9;
+border-radius: 20px;
+margin-bottom: 1.5em;
+margin-top: 1.5em;
+width: 50%;
+}
+
+.deliverycountry dt {
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    margin-top: 0.5em; 
+	font-size: 1.25em;
+	padding-left: 1em; 
+}
+
+.deliverycountry dl dt:first-child {
+    margin-top: 0; 
+}
+
+.deliverycountry dd {
+    font-style: italic;
+	font-size: 1.25em;
+	padding-left: 1.75em; 
+}
+
+#deliveryillustration {
+width: 48%;
+display: inline;
+padding: 1em;
+border: 1px solid #448861;
+border-radius: 30px;
+float: right;
+margin: 1.25em;
+box-shadow: 2px 2px 3px;
+}
+
+#deliveryillustration img {
+	max-width: 100%;	
+	border-radius: 20px;
+}
+
+#deliveryillustration aside {
+	float: right;
+display: block;
+width: 48%;
+}
+
+#deliveryillustration p {
+	font-size: 1.25em;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#deliveryillustration h3 {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: 0em;
+	color: #00210E;
+}
+
+
+
+/* Page Footer */
+#footer {
+	clear: both;	
+	overflow: hidden;
+    background: #194d30; 
+	text-align: center;
+	padding: 2em 2em 1em 2em;
+	background-color: #2d8653;
+	background: -webkit-linear-gradient(#ffffff, #2d8653); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#ffffff, #2d8653); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#ffffff, #2d8653); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffffff, #2d8653); /* Standard syntax */	
+	margin: 0 auto;
+}
+
+
+#footer h3 {
+	font-weight: bold;	
+	color: #000000;
+}
+}
+
+#footer p {
+	color: #1a0600;
+	display: block;
+	font-size: 0.85em;
+	text-align: center;
+}
+
+#footer li a {
+	color: #ffdeb8;
+}
+
+#footer li a:hover {
+	text-shadow: 2px 1px #000000;
+}
+
+#footer p {
+	font-size: 0.85em;	
+}
+
+#footer p a {
+	color: #ffdeb8;	
+}
+
+#footer p a:hover {
+	text-shadow: 2px 1px #000000;
+}
+
+.footergroup {
+	display:inline-block;
+	padding-right: 3em;
+	font-size: 0.85em;	
+	text-align: center;
+}
+
+.registration {
+	text-align: center;
+	display: block;
+	clear: both;
+	margin-top: 0.5em;
+}
+
+/*Media - Home Page*/
+@media screen and (max-width: 1024px) {
+#header h1 {
+font-size: 5em;
+}
+
+.tagline {
+	font-size: 1.5em;
+}
+
+#commonlinks {
+font-size: 0.75em;
+}
+
+.welcomevideo h2 {
+	font-size: 1.5em;
+}
+
+.bookofthemonth p {
+	font-size: 0.5em;
+}
+
+.bookofthemonth {
+width: 35%;
+float: right;
+}
+
+.bookofthemonth h2 {
+	font-size: 1.75em;
+}
+
+.bookofthemonth h3 {
+	font-size: 1.25em;
+}
+
+.bookofthemonth p {
+	font-size: 1em;
+}
+
+.author {
+	font-size: 0.8em;
+}
+
+#primary li  {
+	padding: 0.5em 1.25em;
+}
+
+#primary li  a{
+	font-size: 0.85em;
+}
+
+.illustration {
+	width: 96%;
+}
+
+.articleinner {
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+	padding: 0.5em;
+}
+
+#contentcontainer {
+	padding: 0.5em;
+}
+
+#services {
+	width:46%;
+	padding: 0.5em;
+}
+
+#services h3 {
+font-size: 1.5em;
+}
+
+#services article p {
+font-size: 0.95em;
+}
+
+#acquisitions blockquote {
+font-size: 0.75em;
+}
+
+#acquisitions {
+  width: 49%;
+  padding: 0.5em;
+}
+
+#acquisitions h3 {
+	font-size: 1.5em;
+}
+
+#acquisitions div {
+    margin-left: 1em;
+    margin-bottom: 1em;
+}
+
+.author {
+	font-size: 0.75em;
+}
+
+#secondarynavcolumn {
+	width: 25%;
+}
+
+#secondary ul li a {
+	font-size: 0.85em;
+	padding: 0em;
+}
+
+#books {
+	width: 65%;
+}
+
+.servicesinner h3 {
+	font-size: 1.5em;
+}
+
+.writers h3 {
+	font-size: 1.5em;	
+}
+
+.imageframe {
+	width: 45%;
+	float: right;
+}
+
+.imageframe img {
+	width: 86%;
+}
+
+.imageframe figcaption {
+	font-size: 1.2em;
+}
+
+#nineteenth {
+    width: 67%;  
+margin: 0.5em;	
+padding: 1em;
+}
+
+#nineteenth h2 {
+	font-size: 2em;
+}
+
+#nineteenth p {
+	font-size: 0.95em;
+}
+
+.bookstats {
+	margin: 0.5em 0em 0em 0em;
+	
+}
+
+.bookdescription {
+	width: 60%;
+}
+
+.bookdescription h3 {
+	font-size: 1.15em;
+}
+
+.bookstats dl {
+    padding: 0.2em;
+    width: 100%;
+}
+
+.bookstats dt {    
+    font-size: 0.75em;
+}
+
+.bookstats dd {
+	 font-size: 0.75em;
+	 padding-left: 0.25em;
+}
+
+.deliverycontent h2 {
+	font-size: 2em;
+}
+
+.deliverycontent {
+	width: 80%;
+}
+
+.deliverycountry {
+	width: 100%;
+}
+
+#deliveryillustration p {
+    font-size: 1em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.deliverycountry dl {
+    width: 80%;
+	font-size: 0.9em;
+	}
+
+#deliveryillustration {
+    width: 40%;
+    padding: 0.75em;
+    margin: 1em;
+}
+
+#deliveryillustration h3 {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+	font-size: 1.5em;
+}
+
+#contact h2 {
+	font-size: 2em;
+	margin-top: 0.5em;
+}
+#contact p {
+	font-size: 0.9em;
+}
+
+#controls {
+    margin-left: 1em;
+	margin-bottom: 1em;
+    float: left;
+    width: 45%;
+}
+
+fieldset {
+	padding: 0em;
+}
+
+label {
+	font-size: 0.9em;
+}
+
+#footer h3 {
+		font-size: 1.5em;
+	}
+	
+#footer a {
+	font-size: 0.9em;
+}
+
+#footer p {
+	font-size: 0.9em;
+}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+#wrapper {
+	width: 100%;
+}
+
+.welcomevideo {
+	 width: 90%;
+	}	
+	
+	.welcomevideo h2 {
+		font-size: 2em;
+	}
+	
+	.bookofthemonth {
+		width: 90%;
+		float: left;
+		margin-top: 1em;
+	}
+	
+	.bookofthemonth h2 {
+	font-size: 2em;
+}
+	
+	.bookofthemonth h3 {
+	font-size: 1.75em;
+}
+	
+	.bookofthemonth p {
+		font-size: 1.25em;
+	}
+
+	.author {
+		font-size: 1m;
+	}
+	
+	.illustration {
+		width: 85%;
+	}
+	
+	#services {
+		width: 90%;
+		display: block;		
+	}
+	
+	#acquisitions {
+		width: 90%;
+		display: block;	
+		float: left;		
+	}	
+	
+	#secondarynavcolumn {
+	width: 20%;
+}
+#secondary {
+	display: block;
+}
+
+
+#breadcrumbs {
+	width: 80%;
+	padding-top: 1em;
+}
+
+#breadcrumbs ul li a {
+	font-size: 0.8em;
+}
+
+
+#secondary ul li a {
+	font-size: 0.85em;
+	padding: 0em;
+}
+
+#books {
+	width: 70%;
+	display: block;
+	padding: 1em;
+}
+
+#books h3 {
+	font-size: 1.25em;
+}
+
+#books p {
+font-size: 0.9em;
+}
+
+#books article {
+	margin-left: 1em;
+}
+	
+	#footer h3 {
+		font-size: 1.25em;
+	}
+	
+	#footer a {
+		font-size: 0.90em;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+	#wrapper {
+		width: 100%;
+	}
+	
+	#header img {
+		width: 20%;
+	}
+	
+	#header h1 {
+		font-size: 2.5em;
+	}
+	
+	.tagline {
+	font-size: 1em;
+}
+
+#commonlinks {
+font-size: 0.45em;
+padding-top: 1em;
+}
+
+#primary li  {
+	padding: 0.15em 0.5em;
+}
+
+#primary li  a{
+	font-size: 0.82em;
+}
+
+#secondarynavcolumn {
+	width: 100%;
+	float: left;
+	border-radius: 30px;
+}
+
+#secondary ul li a{
+	font-size: 0.82em;
+}
+
+#contentcontainer {
+	padding: 0.25em;	
+}
+
+main {
+width: 85%;
+}
+
+#books {
+	width: 92%;
+}
+
+#books article {
+    margin-left: 1em;
+	font-size: 1em;
+}
+
+.writers figcaption {
+   font-size: 0.9em;
+}
+
+.welcomevideo {
+	 width: 85%;
+	 float: left;
+	}	
+	
+	.welcomevideo h2 {
+		font-size: 1.75em;
+	}
+	
+	.bookofthemonth {
+		width: 90%;
+		float: left;
+		margin-top: 1em;
+	}
+	
+	.bookofthemonth h2 {
+	font-size: 1.75em;
+}
+	
+	.bookofthemonth h3 {
+	font-size: 1.15em;
+}
+	
+	.bookofthemonth p {
+		font-size: 0.85em;
+	}
+
+	.bookofthemonth img {
+		width: 75%;
+	}
+	
+	.illustration {
+		width: 90%;
+	}
+	
+	.author {
+		font-size: 1m;
+	}
+	
+	#services {
+		width: 90%;
+		display: block;		
+	}
+	
+	#services h3 {
+		font-size: 1.15em;
+	}
+	
+	#services article {
+		margin-left: 0em;
+	}
+	
+	#services p {
+		font-size: 0.85em;
+	}
+	
+	#acquisitions  h3 {
+		font-size: 1.15em;
+	}
+	
+	#acquisitions {
+		width: 93%;
+		display: block;	
+		float: left;		
+	}	
+	
+	#acquisitions div {
+    margin-left: 0.95em;
+}
+	
+	#nineteenth {
+		width: 86%;
+	}
+	
+	.bookstats {
+		width: 86%;
+		display: block;
+	}
+	
+	.bookstats figure {
+		display: inline;
+	}
+	
+	.bookstats dl {
+		float: right;
+		width: 50%;
+	}
+	
+	.bookdescription {
+		width: 96%;
+		display: block;
+		margin-top: 1em;
+	}
+	
+	.deliverycountry {
+		width: 100%;
+	}
+	
+	#deliveryillustration {
+		width: 86%;
+	}
+	
+	#contact {
+	width: 86%;
+	}
+	
+	#controls {
+		width: 86%;
+	}
+	
+	#footer h3 {
+		font-size: 1.25em;
+	}
+	
+	#footer a {
+		font-size: 0.90em;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+	#wrapper {
+		width: 100%;
+	}
+	
+	#header img {
+		width: 25%;
+		margin: 0 auto;
+	}
+	
+	#header h1 {
+		font-size: 2.5em;
+	}
+	
+	.tagline {
+	font-size: 1em;
+}
+
+#contentcontainer {
+padding: 0em;
+}
+
+#commonlinks {
+font-size: 0.45em;
+}
+
+#primary {
+	padding-left: 2em;
+}
+
+#primary ul {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+#primary li  {
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	display: block;
+	width: 60%;
+}
+
+#primary li  a{
+	font-size: 0.75em;
+}
+
+#secondarynavcolumn {
+	width: 100%;
+	float: left;
+	border-radius: 30px;
+}
+
+#secondary ul li a {
+	font-size: 0.75em;
+}
+
+#breadcrumbs {
+	font-size: 0.75em;
+}
+
+main {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+#introduction {
+	margin: 0em;
+	padding-left: 0.5em;
+}
+
+#books {
+	width: 96%;
+	padding: 0.5em;
+	margin-top: 0.5em;
+}
+
+#books h3 {
+	font-size: 1.25em;
+}
+
+#books article {
+    margin-left: 1em;
+	font-size: 1em;
+}
+
+.deliverycountry {
+		width: 100%;
+	}
+	
+	#deliveryillustration {
+		width: 86%;
+		margin: 0.25em;
+	}
+	
+	#contact {
+	width: 86%;
+	}
+	
+	#controls {
+		width: 86%;
+	}
+
+	fieldset {
+		width: 100%;
+	}
+	
+	legend {
+		font-size: 1em;
+	}
+	
+	label {
+		font-size: 0.75em;
+	}
+	
+	figure {
+		padding: 0.25em;
+	}
+	
+.writers figcaption {
+   font-size: 0.7em;
+}
+
+.welcomevideo {
+	 width: 95%;
+	 float: left;
+	 margin-left: 0.5em;
+	 padding: 0.5em;
+	 margin: 0em;
+	 border: 5px solid #448861;
+	}	
+	
+	.welcomevideo h2 {
+		font-size: 1.25em;
+	}
+	
+	.bookofthemonth {
+		width: 92%;
+		float: left;
+		margin-top: 1em;
+		padding: 0.75em;
+	}
+	
+	.bookofthemonth h2 {
+	font-size: 1.25em;
+}
+	
+	.bookofthemonth h3 {
+	font-size: 0.95em;
+}
+	
+	.bookofthemonth p {
+		font-size: 0.85em;
+	}
+
+	.bookofthemonth img {
+		width: 70%;
+	}
+	
+	.illustration {
+		width: 87%;
+		float: left;
+	}
+	
+	.author {
+		font-size: 1m;
+	}
+	
+	#services {
+		width: 90%;
+		display: block;		
+	}
+	
+	#services h3 {
+		font-size: 1.15em;
+	}
+	
+	#services article {
+		margin-left: 0em;
+	}
+	
+	#services p {
+		font-size: 0.85em;
+	}
+	
+	#acquisitions  h3 {
+		font-size: 1.15em;
+	}
+	
+	#acquisitions {
+		width: 90%;
+		display: block;	
+		float: left;		
+	}	
+	
+	#acquisitions img {
+		max-width: 100%;
+	}
+	
+	#footer h3 {
+		font-size: 1.25em;
+	}
+	
+	#footer a {
+		font-size: 0.90em;
+	}
+}
